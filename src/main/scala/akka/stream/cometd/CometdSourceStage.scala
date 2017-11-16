@@ -53,7 +53,7 @@ class CometdSourceStage(settings: CometdSettings) extends GraphStageWithMaterial
           Cometd.handshake(settings).onComplete {
             case Success(true) => subscribe()
             case _ => failure.invoke(CometdException("Handshake fail"))
-          }
+          }(materializer.executionContext)
         } else {
           subscribe()
         }

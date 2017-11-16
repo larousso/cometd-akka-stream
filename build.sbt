@@ -16,7 +16,10 @@ val akkaVersion = "2.5.6"
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor"     % akkaVersion,
   "com.typesafe.akka" %% "akka-stream"    % akkaVersion,
-  "org.cometd.java" % "cometd-java-client" % "3.1.3", 
+  "org.cometd.java" % "cometd-java-client" % "3.1.3",
+  "org.cometd.java" % "cometd-java-server" % "3.1.3" % Test,
+  "org.eclipse.jetty" % "jetty-server" % "9.4.6.v20170531" % Test,
+  "org.eclipse.jetty" % "jetty-servlet" % "9.4.6.v20170531" % Test,
   "com.typesafe.akka" %% "akka-testkit"   % akkaVersion       % Test,
   "org.scalatest"     %% "scalatest"      % "3.0.1"           % Test,
   "org.slf4j" % "slf4j-api" % "1.7.25" % Test
