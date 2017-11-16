@@ -1,3 +1,3 @@
-#CometD support for akkastream
+# CometD support for akkastream
 
 Work in progress 
